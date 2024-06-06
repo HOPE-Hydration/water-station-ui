@@ -1,0 +1,35 @@
+/* components/RotatingBanner.css */
+.rotating-banner-container {
+  width: 140%;
+  overflow: hidden;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 25%;
+  z-index: 1;
+}
+
+.rotating-banner {
+  display: flex;
+  will-change: transform;
+  transform: translateZ(0);
+  will-change: transform;
+  animation: scroll-banner 8s linear infinite;
+}
+
+.rotating-banner img {
+  width: 100%;
+  padding-right: 25px;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

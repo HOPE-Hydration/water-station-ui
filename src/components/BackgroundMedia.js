@@ -2,28 +2,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BackgroundMedia = ({ src, type }) => {
-  const renderMedia = () => {
-    switch (type) {
-      case 'image':
-        return <img src={src} alt="Background" style={styles.media} />;
-      case 'video':
-        return (
-          <video src={src} autoPlay loop muted playsInline style={styles.media} />
-        );
-      case 'gif':
-        return <img src={src} alt="Background" style={styles.media} />;
-      default:
-        return null;
-    }
-  };
-
-  return <div style={styles.container}>{renderMedia()}</div>;
+const BackgroundMedia = ({ src }) => {
+  return (
+    <div style={styles.container}>
+      <img src={src} alt="Background" style={styles.media} />
+    </div>
+  );
 };
 
 BackgroundMedia.propTypes = {
   src: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['image', 'video', 'gif']).isRequired,
 };
 
 const styles = {

@@ -53,4 +53,4 @@ const styles = {
   },
 };
 
-export default IdleScreen;
+export default React.memo(IdleScreen);
